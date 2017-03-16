@@ -385,6 +385,9 @@ export class SelectComponent
         let option: Option = this.optionList.highlightedOption;
         if (option !== null) {
             option.selected ? this.deselectOption(option) : this.selectOption(option);
+            if (!this.multiple) {
+                this.closeDropdown(true);
+            }
         }
     }
 
