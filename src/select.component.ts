@@ -323,6 +323,8 @@ export class SelectComponent
             this.optionList.select(option, this.multiple);
             this.valueChanged();
             this.selected.emit(option.undecoratedCopy());
+            this.selectContainerClicked = true;
+            this.filterInput.nativeElement.value = '';
             // Is this not allready done when setting the value??
             /*setTimeout(() => {
                 if (this.multiple) {
@@ -337,6 +339,7 @@ export class SelectComponent
             this.optionList.deselect(option);
             this.valueChanged();
             this.deselected.emit(option.undecoratedCopy());
+            this.selectContainerClicked = true;
             setTimeout(() => {
                 if (this.multiple) {
                     // this.updateFilterWidth();
@@ -375,8 +378,7 @@ export class SelectComponent
     private selectHighlightedOption() {
         let option: Option = this.optionList.highlightedOption;
         if (option !== null) {
-            this.selectOption(option);
-            this.closeDropdown(true);
+            option.selected ? this.deselectOption(option) : this.selectOption(option);
         }
     }
 
@@ -471,6 +473,7 @@ export class SelectComponent
             if (this.hasSelected && this.filterEnabled &&
                     this.filterInput.nativeElement.value === '') {
                 this.deselectLast();
+                this.filterInput.nativeElement.value = '';
             }
         }
     }

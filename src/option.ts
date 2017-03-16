@@ -8,6 +8,8 @@ export class Option {
     selected: boolean;
     shown: boolean;
 
+    class: string = '';
+
     constructor(value: string, label: string) {
         this.value = value;
         this.label = label;
