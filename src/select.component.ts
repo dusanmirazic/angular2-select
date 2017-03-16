@@ -323,7 +323,9 @@ export class SelectComponent
             this.optionList.select(option, this.multiple);
             this.valueChanged();
             this.selected.emit(option.undecoratedCopy());
-            this.selectContainerClicked = true;
+            if (this.multiple) {
+                this.selectContainerClicked = true;
+            }
             if (this.filterInput && this.filterInput.nativeElement) {
                 this.filterInput.nativeElement.value = '';
             }
@@ -341,7 +343,9 @@ export class SelectComponent
             this.optionList.deselect(option);
             this.valueChanged();
             this.deselected.emit(option.undecoratedCopy());
-            this.selectContainerClicked = true;
+            if (this.multiple) {
+                this.selectContainerClicked = true;
+            }
             setTimeout(() => {
                 if (this.multiple) {
                     // this.updateFilterWidth();
