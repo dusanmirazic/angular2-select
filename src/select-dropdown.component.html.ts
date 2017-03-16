@@ -1,4 +1,4 @@
-<div
+export const TEMPLATE = `<div
     [ngStyle]="{'top.px': top, 'left.px': left, 'width.px': width}">
 
     <div class="filter"
@@ -16,8 +16,7 @@
         <ul
             (wheel)="onOptionsWheel($event)">
             <li *ngFor="let option of optionList.filtered"
-                class="{{ option.cssClass }}"
-                [ngClass]="{'highlighted': option.highlighted, 'selected': option.selected, 'disabled': option.disabled}"
+                [ngClass]="{'highlighted': option.highlighted, 'selected': option.selected, 'disabled': option.disabled, option.class: option.class}"
                 [ngStyle]="getOptionStyle(option)"
                 (click)="onOptionClick(option)"
                 (mouseover)="onOptionMouseover(option)">
@@ -31,3 +30,4 @@
         </ul>
     </div>
 </div>
+`;
