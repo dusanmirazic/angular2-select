@@ -324,7 +324,9 @@ export class SelectComponent
             this.valueChanged();
             this.selected.emit(option.undecoratedCopy());
             this.selectContainerClicked = true;
-            this.filterInput.nativeElement.value = '';
+            if (this.filterInput && this.filterInput.nativeElement) {
+                this.filterInput.nativeElement.value = '';
+            }
             // Is this not allready done when setting the value??
             /*setTimeout(() => {
                 if (this.multiple) {
