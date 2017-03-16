@@ -351,9 +351,6 @@ export class SelectComponent
                     // this.updateFilterWidth();
                     this.updatePosition();
                     this.optionList.highlight();
-                    if (this.isOpen) {
-                        this.dropdown.moveHighlightedIntoView();
-                    }
                 }
             });
         }
