@@ -443,14 +443,12 @@ export class SelectComponent
             }
             else if (key === this.KEYS.UP) {
                 this.optionList.highlightPreviousOption();
-                this.dropdown.moveHighlightedIntoView();
                 if (!this.filterEnabled) {
                     event.preventDefault();
                 }
             }
             else if (key === this.KEYS.DOWN) {
                 this.optionList.highlightNextOption();
-                this.dropdown.moveHighlightedIntoView();
                 if (!this.filterEnabled) {
                     event.preventDefault();
                 }
