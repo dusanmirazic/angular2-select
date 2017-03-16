@@ -8,11 +8,12 @@ export class Option {
     selected: boolean;
     shown: boolean;
 
-    class: string = '';
+    cssClass: string;
 
-    constructor(value: string, label: string) {
+    constructor(value: string, label: string, cssClass: string = '') {
         this.value = value;
         this.label = label;
+        this.cssClass = cssClass;
 
         this.disabled = false;
         this.highlighted = false;
