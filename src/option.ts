@@ -40,7 +40,9 @@ export class Option {
     undecoratedCopy() {
         return {
             label: this.label,
-            value: this.value
+            value: this.value,
+            selected: this.selected,
+            cssClass: this.cssClass
         };
     }
 }
