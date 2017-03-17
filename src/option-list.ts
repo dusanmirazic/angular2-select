@@ -127,11 +127,6 @@ export class OptionList {
         this.highlightOption(option);
     }
 
-    highlightFirstOption() {
-        let option: Option = this.getFirstShown();
-        this.highlightOption(option);
-    }
-
     highlightOption(option: Option) {
         this.clearHighlightedOption();
 
