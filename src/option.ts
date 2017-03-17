@@ -9,11 +9,13 @@ export class Option {
     shown: boolean;
 
     cssClass: string;
+    hidden: boolean;
 
-    constructor(value: string, label: string, cssClass: string = '') {
+    constructor(value: string, label: string, cssClass: string, hidden: boolean) {
         this.value = value;
         this.label = label;
-        this.cssClass = cssClass;
+        this.cssClass = cssClass || '';
+        this.hidden = hidden || false;
 
         this.disabled = false;
         this.highlighted = false;
@@ -42,7 +44,8 @@ export class Option {
             label: this.label,
             value: this.value,
             selected: this.selected,
-            cssClass: this.cssClass
+            cssClass: this.cssClass,
+            hidden: this.hidden
         };
     }
 }
