@@ -100,7 +100,7 @@ export class SelectDropdownComponent
 
     private optionsReset() {
         this.optionList.resetFilter();
-        this.optionList.highlight();
+        this.optionList.highlightFirst();
     }
 
     /** View. **/
