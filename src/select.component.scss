@@ -84,6 +84,10 @@ ng-select {
             padding: 0 10px;
             width: 100%;
 
+            >div.hidden-option {
+                display: none !important;
+            }
+
             >div.option {
                 background-color: #eee;
                 border: 1px solid #aaa;

@@ -37,7 +37,7 @@
         *ngIf="multiple">
         <div class="option"
             *ngFor="let option of optionList.selection"
-            [ngClass]="{'hiden-option': option.hidden }">
+            [ngClass]="{'hidden-option': option.hidden }">
             <span class="deselect-option"
                 (click)=onDeselectOptionClick(option)>
                 &#x2715;
