@@ -35,7 +35,7 @@
 
     <div class="multiple"
         *ngIf="multiple">
-        <div class="option"
+        <div class="option" 
             *ngFor="let option of optionList.selection"
             [ngClass]="{'hidden-option': option.hidden }">
             <span class="deselect-option"
