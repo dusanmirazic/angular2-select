@@ -354,8 +354,8 @@ export class SelectComponent
             setTimeout(() => {
                 if (this.multiple) {
                     // this.updateFilterWidth();
-                    this.updatePosition();
-                    this.optionList.highlight();
+                    //this.updatePosition();
+                    //this.optionList.highlight();
                 }
             });
         }
