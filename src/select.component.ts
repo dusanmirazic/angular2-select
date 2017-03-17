@@ -351,13 +351,13 @@ export class SelectComponent
             if (this.multiple) {
                 this.selectContainerClicked = true;
             }
-            setTimeout(() => {
-                if (this.multiple) {
-                    // this.updateFilterWidth();
-                    //this.updatePosition();
-                    //this.optionList.highlight();
-                }
-            });
+            //setTimeout(() => {
+            //    if (this.multiple) {
+            //         this.updateFilterWidth();
+            //         this.updatePosition();
+            //        this.optionList.highlight();
+            //    }
+            //});
         }
     }
 
