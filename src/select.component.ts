@@ -278,7 +278,12 @@ export class SelectComponent
         }
 
         this.optionList = new OptionList(this.options);
-
+        this.options.forEach((option) => {
+            if (option.selected) {
+                this.hasSelected = true;
+                return;
+            }
+        });
         if (!firstTime) {
             this.optionList.value = v;
             this.valueChanged();
@@ -443,12 +448,14 @@ export class SelectComponent
             }
             else if (key === this.KEYS.UP) {
                 this.optionList.highlightPreviousOption();
+                this.dropdown.moveHighlightedIntoView();
                 if (!this.filterEnabled) {
                     event.preventDefault();
                 }
             }
             else if (key === this.KEYS.DOWN) {
                 this.optionList.highlightNextOption();
+                this.dropdown.moveHighlightedIntoView();
                 if (!this.filterEnabled) {
                     event.preventDefault();
                 }
