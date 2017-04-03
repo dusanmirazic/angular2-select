@@ -455,9 +455,12 @@ export class SelectComponent
             }
             else if (key === this.KEYS.ENTER) {
                 this.selectHighlightedOption();
-                if (this.tags) {
-                    this.enterPressed.emit(null);
-                }
+                setTimeout(() => {
+                    if (this.tags) {
+                        this.enterPressed.emit(null);
+                    }
+                }, 100);
+
             }
             else if (key === this.KEYS.UP) {
                 this.optionList.highlightPreviousOption();
