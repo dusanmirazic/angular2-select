@@ -39,6 +39,7 @@ export class SelectComponent
 
     @Input() allowClear: boolean = false;
     @Input() disabled: boolean = false;
+    @Input() tags: boolean = false;
     @Input() highlightColor: string = '#2196f3';
     @Input() highlightTextColor: string = '#fff';
     @Input() multiple: boolean = false;
@@ -49,6 +50,7 @@ export class SelectComponent
     @Output() opened: EventEmitter<null> = new EventEmitter<null>();
     @Output() closed: EventEmitter<null> = new EventEmitter<null>();
     @Output() noOptionsFound: EventEmitter<string> = new EventEmitter<string>();
+    @Output() enterPressed: EventEmitter<any> = new EventEmitter<any>();
     @Output() selected: EventEmitter<any> = new EventEmitter<any>();
     @Output() deselected: EventEmitter<any> = new EventEmitter<any>();
 
@@ -452,7 +454,11 @@ export class SelectComponent
                 this.closeDropdown();
             }
             else if (key === this.KEYS.ENTER) {
-                this.selectHighlightedOption();
+                if (!this.tags) {
+                    this.selectHighlightedOption();
+                } else {
+                    this.enterPressed.emit(null);
+                }
             }
             else if (key === this.KEYS.UP) {
                 this.optionList.highlightPreviousOption();
