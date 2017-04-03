@@ -94,19 +94,25 @@ export class OptionList {
     }
 
     filter(term: string) {
-
+        let anyShown: boolean = false;
         if (term.trim() === '') {
             this.resetFilter();
+            anyShown = this.options.length > 0;
         }
         else {
             this.options.forEach((option) => {
                 let l: string = Diacritics.strip(option.label).toUpperCase();
                 let t: string = Diacritics.strip(term).toUpperCase();
                 option.shown = l.indexOf(t) > -1;
+
+                if (option.shown) {
+                    anyShown = true;
+                }
             });
         }
 
         this.highlight();
+        return anyShown;
     }
 
     resetFilter() {
