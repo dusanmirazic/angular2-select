@@ -454,9 +454,8 @@ export class SelectComponent
                 this.closeDropdown();
             }
             else if (key === this.KEYS.ENTER) {
-                if (!this.tags) {
-                    this.selectHighlightedOption();
-                } else {
+                this.selectHighlightedOption();
+                if (this.tags) {
                     this.enterPressed.emit(null);
                 }
             }
