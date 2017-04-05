@@ -1,6 +1,6 @@
 {
   "name": "vivify-angular2-select",
-  "version": "1.0.0-beta.4-7",
+  "version": "1.0.0-beta.4-8",
   "description": "Select component for Angular2.",
   "main": "index.js",
   "repository": "git@github.com:dusanmirazic/angular2-select.git",

@@ -6,6 +6,7 @@
         <input
             *ngIf="filterEnabled"
             #filterInput
+            [attr.maxlength]="maxlength"
             (click)="onSingleFilterClick($event)"
             (input)="onSingleFilterInput($event)"
             (keydown)="onSingleFilterKeydown($event)">
