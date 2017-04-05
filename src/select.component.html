@@ -49,6 +49,7 @@
             #filterInput
             tabindex="-1"
             [placeholder]="placeholderView"
+            [attr.maxlength]="maxlength"
             [ngStyle]="{'width.px': filterInputWidth}"
             (input)="onMultipleFilterInput($event)"
             (keydown)="onMultipleFilterKeydown($event)"/>
