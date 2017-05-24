@@ -1,9 +1,9 @@
 {
-  "name": "vivify-angular2-select",
-  "version": "1.0.0-beta.4-8",
+  "name": "vi-angular2-select",
+  "version": "1.0.0",
   "description": "Select component for Angular2.",
   "main": "index.js",
-  "repository": "git@github.com:dusanmirazic/angular2-select.git",
+  "repository": "git@github.com:Vivify-Ideas/angular2-select.git",
   "keywords": [
     "angular",
     "angular2",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/basvandenberg/angular2-select/issues"
   },
-  "homepage": "https://github.com/dusanmirazic/angular2-select.git",
+  "homepage": "https://github.com/Vivify-Ideas/angular2-select.git",
   "dependencies": {},
   "devDependencies": {
     "@angular/common": "^2.4.1",
